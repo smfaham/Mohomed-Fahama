@@ -17,6 +17,12 @@ cp -r dist/* android/app/src/main/assets/dist/
 
 # 3. Check for Java and build .AAB
 echo "3/3 Compiling Android App Bundle (.aab)..."
+if [ ! -f android/gradle/wrapper/gradle-wrapper.jar ]; then
+    echo "Downloading gradle-wrapper.jar..."
+    mkdir -p android/gradle/wrapper
+    curl -sSL "https://raw.githubusercontent.com/gradle/gradle/v8.7.0/gradle/wrapper/gradle-wrapper.jar" -o android/gradle/wrapper/gradle-wrapper.jar
+fi
+
 if command -v java >/dev/null 2>&1; then
     cd android
     chmod +x gradlew
