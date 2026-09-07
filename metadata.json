@@ -1,0 +1,10 @@
+{
+  "name": "Brivo",
+  "description": "A sun, twilight, and golden hour tracker designed for Wear OS smartwatches with live solar dial, moon phases, and glanceable complication widgets.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
